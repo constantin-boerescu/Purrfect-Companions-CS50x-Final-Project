@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block title %}Log in{% endblock %}
+{% block body %}
+<form action="/login" method="post">
+    <div class="login-container">
+        <div class="input-rectangle">
+            <input type="text" placeholder="Username" id="username" name="username">
+        </div>
+        <div class="input-rectangle">
+            <input type="password" placeholder="Password" name="password" id="password">
+        </div>
+        <button class="login-button">Log in</button>
+    </div>
+</form>
+{% endblock %}

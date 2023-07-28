@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block title %}Upload{% endblock %}
+{% block body %}
+<div class="bg_rectangle">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="r1">
+            <div class="circle">
+                <div class="plus1"></div>
+                <div class="plus2"></div>
+            </div>
+            <h3 class="add_text">Add image</h3>
+            <div class="image_form">
+                <input type="file" accept="image/*" name="image">
+            </div>
+            <div class="cat_general_info">
+                <input type="text" class="general_inpt" placeholder="Name:" name="name">
+                <input type="text" class="general_inpt" placeholder="Age:" name="age">
+                <input type="text" class="general_inpt" placeholder="Gender:" name="gender">
+            </div>
+        </div>
+        <div class="r2">
+            <input type="text" class="location_inpt" placeholder="Location:" name="location">
+            <textarea type="text" class="description_inpt" placeholder="Description:" name="description"></textarea>
+            <input class="submit_btn" type="submit" value="Submit">
+        </div>
+    </form>
+<div class="second"></div>
+{% endblock%}

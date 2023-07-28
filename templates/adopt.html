@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block title %}{{cat[1]}}{% endblock %}
+{% block body %}
+<div class="adopt_text">
+    <h1 class="my_font ">Congratulation {{cat[1]}} is now your new furrever friend!</h1>
+</div>
+
+<img src="{{ url_for('static', filename=cat[6])}}" class="adopt_image centered" alt="Cat image">
+
+{% endblock %}

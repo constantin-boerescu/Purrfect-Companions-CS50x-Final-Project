@@ -1,0 +1,174 @@
+/* -------------------Upload page------------------- */
+/* Background rectangle position */
+.rectangle_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vh;
+    
+}
+/* Background rectangle apparance */
+.bg_rectangle{
+    background-color: #C5D6DA;
+    height: 75vh;
+    width: 90vw;
+    border-radius: 20px;
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
+}
+/* Circle apparance */
+.image_placeholder{
+    height: 230px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #60696b;
+    border-radius: 50%;
+    margin-left: 90px;
+    margin-top: 120px;
+    align-items: center;
+}
+
+.plus1, .plus2 {
+    background-color: #C5D6DA;
+    position: absolute;}
+
+.plus1{
+    width: 140px;
+    height: 40px;
+    background-color: #C5D6DA;
+    position: absolute;
+}
+.plus2{
+    width: 40px;
+    height: 140px;
+}
+
+/* Add image text */
+.add{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight:900;
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Upload image form */
+.image_form{
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+/* Name gender age section */
+.general{
+    display: flex;
+    justify-content: left;
+    margin-left: 15px;
+}
+
+.general_form {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+/* Forms apparence */
+.general_form input{
+    padding: 10px;
+    width: 110px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #112034;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight:200;
+    color: #C5D6DA;
+
+}
+/* Placeholder font color */
+.general_form input::placeholder {
+    color: #C5D6DA;
+}
+.left-section,
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.left-section{
+    margin-right: 80px;
+}
+/* Location placehoder */
+/*  */
+.location_holder{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* Location dimensions */
+.location_holder input{
+    padding: 10px;
+    border: 2px solid #112034;
+    border-radius: 5px;
+    width: 800px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:900;
+    background-color: #C5D6DA
+    
+}
+.location_holder ::placeholder, .description_holder ::placeholder{
+    color: #112034;
+    margin-left: 20px;
+    align-items: left;
+}
+
+/* Description placeholder */
+.description_holder{
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+
+/* Description field */
+.input-text-field {
+    width: 800px;
+    height: 410px;
+    padding: 10px;
+    border: 2px solid #112034;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:900;
+    background-color: #C5D6DA;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+/* Submit button aspect */
+.submit_btn{
+    width: 800px;
+    height: 50px;
+    background-color: #112034;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    color:#C5D6DA;
+    border-radius: 5px;
+}
+  
+/* Submit btn hover */
+.submit_btn:hover {
+    background-color: #3e76be;
+    color:#112034;
+}

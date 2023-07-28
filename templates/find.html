@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+{% block title %}Find{% endblock %}
+{% block body %}
+{% for cat in cats %}
+    <div class="listing_container">
+        <div class="listing">
+            <img src="{{ url_for('static', filename=cat[6]) }}" class="cat_image" alt="Cat Image">
+        </div>
+        <div class="cat_info">
+            <p>{{ cat[1] }}, {{ cat[2] }}, {{ cat[3] }}</p>
+            <br>
+            <p class="location">Location: {{cat[4]}}</p>
+            <a href="{{ url_for('cat_details', cat_id=cat[0])}}" class="details_btn">View Details</a>
+            <div class="details_btn fav_btn" value="{{cat[0]}}">Add to favourites</div>
+        </div>
+    </div>
+   
+{% endfor %}
+<script src="{{ url_for('static', filename='js/find.js') }}"></script>
+{% endblock %}

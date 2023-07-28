@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+{% block title %}{{cat[1]}}{% endblock %}
+{% block body %}
+<div class="bg_rectangle">
+    <div class="r1">
+        
+        <img src="{{ url_for('static', filename=cat[6]) }}" class="cat_image_d" alt="Cat Image">
+        
+        <div class="cat_general_info">
+            <p class="general_inpt">{{cat[1]}}</p>
+            <p class="general_inpt">{{cat[2]}}</p>
+            <p class="general_inpt">{{cat[3]}}</p>
+        </div>
+
+    </div>
+
+    <div class="r2"> 
+        <div class="location_inpt border">
+            <p>Location:{{cat[4]}}</p>
+        </div>
+
+        <div class="description_inpt border">
+            <p>Description:{{cat[5]}}</p>
+        </div>
+           
+        <a href="{{ url_for('adopt', cat_id=cat[0])}}" class="submit_btn href_btn">Adopt</a>
+    </div>
+</div>
+
+{% endblock %}
+

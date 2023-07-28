@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<form action="{{ url_for('find')}}" method="post">
+    <div class="filters_home">
+            <div class="locations">
+                <div class="select-option1">Locations</div>
+                <div class="content1">
+                    <ul class="options">
+                        {% for location in locations %}
+                        <li><input type="checkbox" id="{{ location|lower }}" name="location" value="{{ location|lower }}">
+                        <label for="{{ location|lower }}">{{ location }}</label></li>
+                        {% endfor %}
+                </ul>
+                </div>
+            </div>
+            <div class="genders">
+                <div class="select-option3">Gender</div>
+                <div class="content3">
+                <ul class="options">
+                    {% for gender in genders %}
+                        <li><input type="checkbox" id="{{ gender|lower }}" name="gender" value="{{ gender|lower }}">
+                        <label for="{{ gender|lower }}">{{ gender }}</label></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="ages">
+                <div class="select-option2">Age</div>
+                <div class="content2">
+                <ul class="options">
+                    {% for age in ages %}
+                        <li><input type="checkbox" id="{{ age|lower }}" name="age" value="{{ age|lower }}">
+                        <label for="{{ age|lower }}">{{ age }}</label></li>
+                    {% endfor %}
+                </ul>
+                </div>
+                </div>
+    </div>
+    <div class="center_container">
+        <button type="submit" class="find_btn">Find your purrfect companion</button>
+    </div>
+
+</form>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+<img class="main_logo" src="/static/images/logo.svg" alt="cat logo">
+{% endblock %}

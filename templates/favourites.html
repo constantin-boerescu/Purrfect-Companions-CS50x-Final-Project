@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block title %}Find{% endblock %}
+{% block body %}
+<form action="/favourites" method="post">
+{% for cat in cats %}
+    <div class="listing_container">
+        <div class="listing">
+            <img src="{{ url_for('static', filename=cat[6]) }}" class="cat_image" alt="Cat Image">
+        </div>
+        <div class="cat_info">
+            <p>{{ cat[1] }}, {{ cat[2] }}, {{ cat[3] }}</p>
+            <br>
+            <p class="location">Location: {{cat[4]}}</p>
+            <a href="{{ url_for('cat_details', cat_id=cat[0])}}" class="details_btn">View Details</a>
+                <!-- Add a hidden input field to store the cat ID -->
+                <input type="hidden" name="cat_id" value="{{ cat[0] }}">
+                <input type="submit" value="Remove from Favorites" class="details_btn">
+
+
+        </div>
+    </div>
+    
+   
+{% endfor %}
+</form>
+<script src="{{ url_for('static', filename='js/find.js') }}"></script>
+{% endblock %}

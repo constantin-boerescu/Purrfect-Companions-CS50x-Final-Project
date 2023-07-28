@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="/"><img class="tlogo" src="/static/images/type_logo.svg" alt="typographic logo"></a>
+            <nav class ="navbar">
+                <ul class="nav_links">
+                    {% if 'username' in session %}
+                        <li class="center_button", id="user">{{username}}</li>
+                        <li class="center_button"><a href="/upload">Upload a cat</a></li>
+                        <li class="center_button"><a href="/favourites">Favourites</a></li>
+                        <li class="center_button"><a href="/logout">Log out</a></li>
+
+                    {% else %}
+                        <li class="center_button"><a href="/login">Log in</a></li>
+                        <li class="center_button"><a href="/signup">Sign up</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        <!-- End of navbar -->
+        </div>
+    </header>
+    {% block body %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block title %}Sign up{% endblock %}
+{% block body %}
+<form action="/signup" method="post">
+    <div class="login-container">
+        <div class="input-rectangle">
+            <input type="text" placeholder="Username" id="username" name="username">
+        </div>
+        <div class="input-rectangle">
+            <input type="password" placeholder="Password" name="password" id="password">
+        </div>
+        <div class="input-rectangle">
+            <input type="password" placeholder=" Confirm password" name="confirm" id="confirm">
+        </div>
+        <button class="login-button">Sign up</button>
+    </div>
+</form>
+{% endblock %}
