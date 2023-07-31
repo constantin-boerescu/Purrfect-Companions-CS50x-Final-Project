@@ -4,10 +4,16 @@ import sqlite3
 import bcrypt
 import os
 
+# Configure application
 app = Flask(__name__)
+
+# Get the database file
 db_path = "purrfect.db"
+
+# Set the salt 
 salt = bcrypt.gensalt()
-app.secret_key = 'your_secret_key'
+app.secret_key = 'secret_key'
+
 
 def insert_user(username, password):
     '''Insert the user info into the database'''
