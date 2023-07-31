@@ -14,7 +14,6 @@ db_path = "purrfect.db"
 salt = bcrypt.gensalt()
 app.secret_key = 'secret_key'
 
-
 def insert_user(username, password):
     '''Insert the user info into the database'''
 
@@ -48,6 +47,7 @@ def check_password(username, to_check):
     if not user_info:
         return False
 
+    # Gets the password
     password = user_info[2]
 
     # Check it the password match with the password from the database
@@ -57,8 +57,8 @@ def check_password(username, to_check):
         return True
 
     connection.close()
-
     return False
+
 # Inserts the cats info
 def insert_cat(name, age, gender, location, description, path):
     '''Inserts the cat data into the db'''
@@ -302,8 +302,6 @@ def adopt(cat_id):
     return render_template("adopt.html", cat=cat)
 
 
-
-
 @app.route('/update_favs', methods=['POST'])
 def update_favs():
 
@@ -325,41 +323,46 @@ def update_favs():
 
 @app.route("/favourites", methods=["GET", "POST"])
 def favourites():
+
+    # If the userg acces the page with get renders the users favouites
     if request.method == "GET":
         if 'username' in session:
 
             cats=[]
             username = session.get('username')
+            # Gets the users favourites by id
             favourites_id = session.get('favourites_id', [])
 
-            print(favourites_id)
             for id in favourites_id:
+                # Gets thhe cats info by id
                 cat = get_cat_by_id(id)
 
                 cats.append(cat)
+                # If the cat is none removes it
                 for cat in cats:
                     if cat is None:
                         cats.remove(cat)
-                print(cats)
 
             return render_template("favourites.html", username=username, cats=cats)
     else:
+        # If the method is post remove the cat from favourites
         if 'username' in session:
             username = session.get('username')
-        favourites_id = session.get('favourites_id', [])
-        cat_id = int(request.form.get('cat_id'))
-        print("-----------------------adsdasda-d-")
-        print(cat_id)
-        favourites_id.remove(cat_id)
-        session['favourites_id'] = favourites_id
-        return redirect("favourites")
+        #  Gets the users favourites 
+            favourites_id = session.get('favourites_id', [])
+            cat_id = int(request.form.get('cat_id'))
 
+        #   Removes the cat and updates the list
+            favourites_id.remove(cat_id)
+            session['favourites_id'] = favourites_id
+            return redirect("favourites")
 
 @app.route('/get_array_data')
 def get_cats_data():
     if 'username' in session:
         favourites_id = session.get('favourites_id', [])
 
+        # Retruns the users favourites
         return jsonify(favourites_id)
 
     # If the user is not logged in or doesn't have any favorites
