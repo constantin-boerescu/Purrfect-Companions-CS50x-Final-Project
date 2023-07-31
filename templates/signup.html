@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% block title %}Sign up{% endblock %}
 {% block body %}
-<form action="/signup" method="post">
+<form action="/signup" autocomplete="off" method="post">
     <div class="login-container">
         <div class="input-rectangle">
             <input type="text" placeholder="Username" id="username" name="username">
