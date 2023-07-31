@@ -1,14 +1,12 @@
-body{
-    height: 100%;
-    overflow-x: hidden;
-}
+/* ------------ Navbar ------------*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-.container {
+.navbar_container {
     width: 80%;
     margin: 0 auto;
 }
@@ -38,7 +36,6 @@ nav {
     margin-bottom: 20px;
 }
 
-
 nav ul{
     list-style: none;
 }
@@ -58,7 +55,6 @@ nav a, #user {
 nav a:hover {
     color: aqua;
 }
-
 
 .main_logo{
     position:absolute;
@@ -90,10 +86,10 @@ nav a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
-    left:50%;
-    top:620px;
     text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -126,20 +122,21 @@ nav a:hover {
     color: #C5D6DA;
 }
 
+/* ------------ Find page ------------*/
 
-/* -----------Find page----------- */
 /*  Aligns the buttons */
 .center_container {
     display: flex;
     justify-content: center;
 }
+
 /*  Space around the buttons */
 .button-wrapper {
     margin: 4vh 6vh;
     position: relative;
     display: inline-block;
-    
 }
+
 /* Buttons apparence */
 .find_btn_filter {
     width: 25vw; /* Set the width to 20% of the window's width */
@@ -156,6 +153,7 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
 /* Dropdown apperance */
 .dropdown_menu{
     display: none;
@@ -173,14 +171,17 @@ nav a:hover {
     font-family: Arial, Helvetica, sans-serif;
     display: block;
 }
+
 /* Dropdown element hover color */
 .dropdown_menu a:hover {
     background-color: #d4e2e3;
 }
+
 /* Dropdown display */
 .button-wrapper:hover .dropdown_menu{
     display: block;
 }
+
 /* Button color change */
 .button-wrapper:hover .find_btn_filter{
     background-color: #C5D6DA;
@@ -218,14 +219,14 @@ nav a:hover {
     font-size: 40px;
     font-weight: 900;
     border-radius: 0 10px 10px 0;
-    
 }
+
 /* Text inside the rectangle */
 .location{
     font-size: 30px;
     font-weight:600;
-
 }
+
 /* Position and aspect of the details button */
 .details_btn {
     display: inline-block;
@@ -238,14 +239,15 @@ nav a:hover {
     margin-top: 90px;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
 }
+
 .details_btn:hover {
     background-color: #3e76be;
     color: #C5D6DA;
 }
 
-
-/* ---------------Log in page--------------- */
+/* ------------ Log in page ------------*/
 
 /* Log in position */
 .login-container{
@@ -300,9 +302,7 @@ nav a:hover {
     color: #112034;
 }
 
-
-/* -------------------Details page------------------- */
-
+/* ------------ Details page ------------*/
 
 .cat_image_d{
     max-width: 400px;
@@ -313,17 +313,17 @@ nav a:hover {
     transform: translate(-50%);
     border-radius: 10px;
 }
-.image_d{
 
+.image_d{
     width: 300px;
     height: 200px;
 }
+
 .border{
     border:2px solid #112034;
 }
 
-
-/* -----------Upload page----------- */
+/* ------------ Upload page ------------*/
 
 /* Backround rectangle apparence and position */
 .bg_rectangle{
@@ -338,9 +338,9 @@ nav a:hover {
     border-radius: 20px;
     overflow: hidden;
 }
+
 /* Right side section */
 .r2{
-
     position:absolute;
     right:50px;
     width: 850px;
@@ -348,8 +348,8 @@ nav a:hover {
     overflow: hidden;
     float:right;
     margin-top: 20px;
-
 }
+
 /* Description and location and submit fields shared propierties */
 .description_inpt,
 .location_inpt, .submit_btn {
@@ -363,15 +363,15 @@ nav a:hover {
     background-color:#C5D6DA;
     color:#112034;
     font-weight: 900;
-
 }
+
 /* Location aspect and position */
 .location_inpt{
     top:20px;
     height: 50px;
     padding: 10px;
-
 }
+
 /* Descriton aspect and position */
 .description_inpt{
     top:90px;
@@ -458,7 +458,6 @@ nav a:hover {
     position: relative;
     top: 530px;
     left: 18px;
-
 }
 
 .general_inpt{
@@ -475,13 +474,15 @@ nav a:hover {
     font-weight:200;
     color: #C5D6DA;
 }
+
 .href_btn{
     text-align: center;
     padding: 10px;
     text-decoration: none;
 }
 
-/* ------------------------ADOPT------------------------ */
+/* ------------ Adopt page ------------*/
+
 .centered{
     top:50%;
     left:50%;
@@ -509,15 +510,13 @@ nav a:hover {
 }
 
 .filters_home{
-    
-    margin-left: 380px;
+    margin-left: 50vh;
     margin-top: 80px;
-
     display: flex;
     width:0;
- 
 
 }
+
 .filters_home li{
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -551,15 +550,17 @@ nav a:hover {
     color:#112034;
     border: none;
 }
+
 .content1, .content2, .content3{
     display: none;
     background-color: #C5D6DA;
     width: 200px;
-
 }
+
 .locations.active .select-option1{
     border-radius: 10px 10px 0px 0px;
 }
+
 .locations.active .content1{
     display: block;
     
@@ -568,6 +569,7 @@ nav a:hover {
 .ages.active .select-option2{
     border-radius: 10px 10px 0px 0px;
 }
+
 .ages.active .content2{
     display: block;
 }
