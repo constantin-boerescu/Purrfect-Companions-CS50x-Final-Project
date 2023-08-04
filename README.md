@@ -1,7 +1,7 @@
 # Purrfect Companions
 ## Video Demo:  https://youtu.be/P3tp71tUhUg
 ## Description:
-Purrfect Companios is a website where a user can upload a cat adoption post or can adopt a cat.
+Purrfect Companions is a website designed for the final project of CS50x. It serves as a platform where users can either upload cat adoption posts or find and adopt a cat.
 
 The project is made with HTML, CSS, JavaScript, Python (Flask) and a little bit of SQL.
 When a user enters the website for the first time he is redirected to a sign up page where the user needs to fill in a username and password. If any field is empty, the username is taken or the password does not match the confirmation, an error is displayed accordingly.
